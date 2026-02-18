@@ -1,0 +1,165 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: #f5f5f5;
+  min-height: 1000vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 10px;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  margin-bottom: 24px;
+}
+
+/* GRID LAYOUT */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1000px) {
+  .menu-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+
+.day-card {
+  background: rgba(17, 24, 39, 0.9);
+  border-radius: 10px;
+  padding: 14px 12px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.day-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+}
+
+.day-name {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #4fd1c5;
+}
+
+.meal-name {
+  font-size: 0.95rem;
+  margin-bottom: 2px;
+}
+
+.meal-label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-right: 4px;
+}
+
+.separator {
+  height: 1px;
+  background: rgba(148, 163, 184, 0.4);
+  margin: 8px 0;
+}
+
+/* LIKE / DISLIKE UI */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  gap: 4px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 4px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition:  0.15s ease, transform 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.like-btn {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.like-btn:hover {
+  background: rgba(34, 197, 94, 0.3);
+}
+
+.dislike-btn {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+}
+
+.dislike-btn:hover {
+  background: rgba(248, 113, 113, 0.3);
+}
+
+.count-text {
+  font-size: 0.75rem;
+  color: #e5e7eb;
+}
+
+.best-meal {
+  border: 2px solid gold;
+  box-shadow: 0 0 1px rgba(255, 215, 0, 0.6);
+}
+
+.best-badge {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.7rem;
+  background: gold;
+  color: #1f2933;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.note {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
